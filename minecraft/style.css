@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff; /* Text color white */
+    overflow-x: hidden;
+}
+
+header {
+    background: url('images/minecraft.avfi') center/cover no-repeat;
+    background-size: 100vw auto; /* Stretches to the full width of the viewport without distorting the aspect ratio */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    background-position: center top; /* Centers the image horizontally and aligns it to the top vertically */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: backgroundScroll 15s linear infinite;
+}
+
+@keyframes backgroundScroll {
+    from {background-position: center top;}
+    to {background-position: center bottom;}
+}
+
+
+header h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff; /* White text */
+}
+
+header h1 span {
+    color: #fff; /* White text for the span */
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #fff; /* White text */
+}
+
+.server-info {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #111;
+}
+
+.server-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff; /* White text */
+}
+
+.connections {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.connection-box {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.connection-box h3 {
+    font-size: 1.5rem;
+    color: #fff; /* White text */
+}
+
+.why-choose-us {
+    padding: 50px 0;
+    background-color: #000;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #fff; /* White text */
+}
+
+.reasons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.reason {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+}
+
+.reason img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.reason h3 {
+    font-size: 1.5rem;
+    color: #fff; /* White text */
+}
+
+.reason p {
+    margin-top: 10px;
+    color: #fff; /* White text */
+}
+
+footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #111;
+    color: #fff; /* White text */
+}
