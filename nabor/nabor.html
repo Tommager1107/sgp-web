@@ -15,12 +15,28 @@
             min-height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
+            text-align: center;
         }
 
         /* Štýl pre kontajner */
         .container {
             max-width: 100%;
-            text-align: center;
+        }
+
+        /* Štýl pre tlačidlá */
+        .button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .button:hover {
+            background-color: #555;
         }
 
         /* Štýl pre iFrame */
@@ -29,13 +45,35 @@
             width: 640px;
             height: 1480px;
             max-width: 90%;
+            display: none; /* Skryté pred výberom */
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Náborový formulár</h1>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSccuCIPECeYj5ZnLnosGz6djNGpFHTBpHTPNEXJozyu-83P1A/viewform?embedded=true" marginheight="0" marginwidth="0">Načítava sa…</iframe>
+        <button class="button" onclick="showForm('admin')">ADMIN</button>
+        <button class="button" onclick="showForm('helper')">HELPER</button>
+
+        <!-- iFrames pre jednotlivé pozície -->
+        <iframe id="adminForm" src="https://docs.google.com/forms/d/e/1FAIpQLSccuCIPECeYj5ZnLnosGz6djNGpFHTBpHTPNEXJozyu-83P1A/viewform?embedded=true" marginheight="0" marginwidth="0"></iframe>
+        <iframe id="helperForm" src="https://docs.google.com/forms/d/e/1FAIpQLSfWjbtWE7-t-XWsu47t6Qu6bNfWxiVAUO9Y9n-HPCf1Aw6Hww/viewform?embedded=true" marginheight="0" marginwidth="0"></iframe>
     </div>
+
+    <script>
+        function showForm(role) {
+            // Skryje oba iframy
+            document.getElementById('adminForm').style.display = 'none';
+            document.getElementById('helperForm').style.display = 'none';
+
+            // Zobrazí iframe podľa výberu
+            if (role === 'admin') {
+                document.getElementById('adminForm').style.display = 'block';
+            } else if (role === 'helper') {
+                document.getElementById('helperForm').style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
