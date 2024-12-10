@@ -22,23 +22,23 @@
             font-size: 18px;
         }
 
-        .info-bar a {
-            color: #000;
-            text-decoration: underline;
-        }
-		
-		.info-bar-2 {
+            .info-bar a {
+                color: #000;
+                text-decoration: underline;
+            }
+
+        .info-bar-2 {
             background: #ff0000;
             padding: 10px;
             text-align: center;
             font-weight: bold;
             font-size: 18px;
         }
-		
-		.info-bar-2 a {
-            color: #be0000;
-            text-decoration: underline;
-        }
+
+            .info-bar-2 a {
+                color: #be0000;
+                text-decoration: underline;
+            }
 
         /* Header */
         .header {
@@ -47,17 +47,17 @@
             padding: 30px 0;
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 36px;
-            color: #00b0f4;
-        }
+            .header h1 {
+                margin: 0;
+                font-size: 36px;
+                color: #00b0f4;
+            }
 
-        .header h2 {
-            margin: 10px 0 0;
-            font-size: 18px;
-            color: #cccccc;
-        }
+            .header h2 {
+                margin: 10px 0 0;
+                font-size: 18px;
+                color: #cccccc;
+            }
 
         /* Server Status */
         .status {
@@ -69,58 +69,97 @@
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         }
 
-        .status h3 {
-            margin: 0 0 20px;
-            font-size: 24px;
-            color: #00e676;
-        }
+            .status h3 {
+                margin: 0 0 20px;
+                font-size: 24px;
+                color: #00e676;
+            }
 
         .server {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 5px; /* Reduced margin for closer server status */
-            padding-bottom: 10px; /* Added padding for space under the server */
-            border-bottom: 1px solid #333; /* Line under each server */
+            margin-bottom: 5px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
         }
 
-        .server .server-label {
-            font-size: 18px;
+            .server .server-label {
+                font-size: 18px;
+            }
+
+            .server .server-status {
+                font-size: 14px;
+                padding: 5px 10px;
+                border-radius: 5px;
+            }
+
+            .server .online {
+                background: #00e676;
+                color: #121212;
+            }
+
+            .server .offline {
+                background: #e60000;
+                color: #121212;
+            }
+
+            .server .operational {
+                background: #00e676;
+                color: #121212;
+            }
+
+            .server .maintenance {
+                background: #ffcc00;
+                color: #121212;
+            }
+
+            .server .degraded {
+                background: #ff9800;
+                color: #121212;
+            }
+
+            .server .noperational {
+                background: #e60000;
+                color: #121212;
+            }
+
+        /* Issues Section */
+        .issues {
+            margin: 40px auto;
+            max-width: 800px;
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         }
 
-        .server .server-status {
-            font-size: 14px;
-            padding: 5px 10px;
-            border-radius: 5px;
+            .issues h1 {
+                color: #00e676;
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+        .issue {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #292b2c;
+            border-radius: 8px;
+            border: 1px solid #333;
         }
 
-        .server .online {
-            background: #00e676;
-            color: #121212;
-        }
+            .issue h2 {
+                color: #ffcc00;
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
 
-        .server .offline {
-            background: #e60000;
-            color: #121212;
-        }
+            .issue p {
+                color: #ccc;
+                font-size: 16px;
+                margin: 0;
+            }
 
-        .server .operational {
-            background: #00e676;
-            color: #121212;
-        }
-
-        .server .maintenance {
-            background: #ffcc00;
-            color: #121212;
-        }
-		
-		.server .degraded {
-			background: #ff9800; /* Amber */
-			color: #121212;
-		}		
-
-
-        /* Footer */
         .footer {
             text-align: center;
             margin: 40px 0;
@@ -133,9 +172,9 @@
 
     <!-- Info bar (to notify users of issues) -->
     <div class="info-bar">
-        Some servers are undergoing maintenance. Should be back soon. 
+        Some servers are undergoing maintenance. Should be back soon.
     </div>
-	
+    
 
     <!-- Header Section -->
     <div class="header">
@@ -171,10 +210,31 @@
             <span class="server-label">Hosting</span>
             <span class="server-status" id="status-6">Loading...</span>
         </div>
-		<div class="server">
+        <div class="server">
             <span class="server-label">Plugins</span>
             <span class="server-status" id="status-7">Loading...</span>
         </div>
+    </div>
+
+    <!-- Issues Section -->
+    <div class="issues">
+        <h1>Latest Issues</h1>
+
+        <div class="issue">
+            <p>10.12.2024</p>
+            <h2>Plugins Degraded Performance - FIXED</h2>
+            <p>We were experiencing degraded performance with some of our plugins. The issue has been resolved, and everything is functioning normally now.</p>
+        </div>
+
+      
+
+        <div class="issue">
+            <p>10.12.2024</p>
+            <h2>Website Downtime - MAINTENANCE</h2>
+            <p>Our website is undergoing maintenance.</p>
+        </div>
+
+     
     </div>
 
     <!-- Footer Section -->
@@ -191,14 +251,14 @@
             { id: 4, status: 'ONLINE' },
             { id: 5, status: 'MAINTENANCE' },
             { id: 6, status: 'OPERATIONAL' },
-	    { id: 7, status: 'OPERATIONAL' }
+            { id: 7, status: 'OPERATIONAL' }
         ];
 
         // Function to update the server status on the page
         function updateServerStatus() {
             serverStatus.forEach(server => {
                 const statusElement = document.getElementById(`status-${server.id}`);
-                statusElement.classList.remove('online', 'offline', 'operational', 'maintenance'); // Remove all classes first
+                statusElement.classList.remove('online', 'offline', 'operational', 'maintenance', 'degraded', 'noperational');
                 if (server.status === 'ONLINE') {
                     statusElement.textContent = "Online";
                     statusElement.classList.add('online');
@@ -211,13 +271,13 @@
                 } else if (server.status === 'MAINTENANCE') {
                     statusElement.textContent = "Maintenance";
                     statusElement.classList.add('maintenance');
-                }else if (server.status === 'DEGRADED') {
-				   statusElement.textContent = "Degraded Performance";
-				   statusElement.classList.add('degraded');
-				}
-
-				
-
+                } else if (server.status === 'DEGRADED') {
+                    statusElement.textContent = "Degraded Performance";
+                    statusElement.classList.add('degraded');
+                } else if (server.status === 'noperational') {
+                    statusElement.textContent = "Not Operational";
+                    statusElement.classList.add('noperational');
+                }
             });
         }
 
