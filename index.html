@@ -1,189 +1,104 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShyGuyParadise - SCP:SL Server</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="https://cdn.discordapp.com/icons/1221471602772807740/b9f85ab21aec158ad8a63e5b7f0bbf44.webp?size=1024&format=webp&width=0&height=256" type="image/x-icon">
+    <title>ShyGuyParadise - Maintenance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #121212;
+            color: white;
+        }
+
+        /* Info bar */
+        .info-bar {
+            background: #ffcc00;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .info-bar a {
+            color: #000;
+            text-decoration: underline;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            background-color: #292b2c;
+            padding: 30px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #00b0f4;
+        }
+
+        .header h2 {
+            margin: 10px 0 0;
+            font-size: 18px;
+            color: #cccccc;
+        }
+
+        /* Maintenance Status */
+        .status {
+            margin: 40px auto;
+            max-width: 800px;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .status h3 {
+            margin: 0 0 20px;
+            font-size: 24px;
+            color: #ffcc00;
+        }
+
+        .status p {
+            font-size: 18px;
+            color: #cccccc;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin: 40px 0;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#domov">Domov</a></li>
-		<li><a href="https://pravidla.shyguyparadise.eu">Pravidlá</a></li>
-                <li><a href="#o-nas">O nás</a></li>
-                <li><a href="#team">Tím</a></li>
-                <li><a href="#kontakt">Discord</a></li>
-		<li><a href="#podpora">Podpora</a></li>
-		<li><a href="minecraft">Minecraft Server</a></li>
-            </ul>
-        </nav>
-        <h1>ShyGuyParadise</h1>
-        <h2>Váš ultimátny SCP:SL server</h2>
-    </header>
 
-    <section id="domov" class="hero-section">
-        <div class="hero-content">
-            <h2>Vitajte na ShyGuyParadise</h2>
-            <p>Pripojte sa k nám a zažite najlepší SCP: Secret Laboratory herný zážitok v CZ/SK regióne.</p>
-            <a href="#o-nas" class="btn">Viac informácií</a>
-        </div>
-    </section>
-
-    <section id="o-nas" class="about-section">
-    <h2>O nás</h2>
-    <div class="about-content">
-        <p>ShyGuyParadise je popredný SCP: Secret Laboratory server zameraný na CZ/SK komunitu. Ponúkame:</p>
-        <ul>
-            <li><strong>Vynikajúci herný zážitok:</strong> Naša komunita a kvalitná infraštruktúra zaručujú plynulý a zábavný gameplay.</li>
-            <li><strong>Aktívna moderácia:</strong> Náš tím moderátorov zabezpečuje férovú hru a priateľskú atmosféru.</li>
-            <li><strong>Pravidelné aktualizácie:</strong> Neustále pracujeme na zlepšovaní servera a pridávaní nových funkcií.</li>
-            <li><strong>Prístupná komunita:</strong> Sme otvorení novým hráčom a vždy radi privítame nových členov.</li>
-        </ul>
-		<ul>
-			
-			<p>
-    
+    <!-- Info bar (to notify users of maintenance) -->
+    <div class="info-bar">
+        We are undergoing maintenance and will be back soon. Thank you for your patience!
     </div>
-</section>
 
+    <!-- Header Section -->
+    <div class="header">
+        <h1>ShyGuyParadise</h1>
+        <h2>Website Under Maintenance</h2>
+    </div>
 
-    <section id="team" class="team-section">
-        <h1>Náš Team</h1>
-		<h2>Vedenie servera</h2>
-        <div class="team-members">
-            <div class="team-member">
-                <img src="https://cdn.discordapp.com/avatars/632201931019911178/f1b8a8fe7f1ec73b719b85a12ea51e24.png" alt="Člen tímu">
-                <h3>Sebastián</h3>
-                <p>Majiteľ servera</p>
-            </div>
-            <div class="team-member">
-                <img src="https://cdn.discordapp.com/avatars/894298904403787827/ea4cfdb8c278c092e80b43aa11566b2e.webp?size=1024&format=webp&width=0&height=256" alt="Člen tímu">
-                <h3>Tommager</h3>
-                <p>Co.Majiteľ servera</p>
-            </div>
-            <div class="team-member">
-                <img src="https://cdn.discordapp.com/avatars/560813698206269440/73dce21d8e15a4adee94a122387fe19a.png" alt="Člen tímu">
-                <h3>Pepa</h3>
-                <p>Vedenie servera</p>
-            </div>
-            <!-- Pridajte ďalších členov tímu podľa potreby -->
-        </div>
-		<h2>Developer Team</h2>
-		<div class="team-members">
-            <div class="team-member">
-                <img src="https://cdn.discordapp.com/avatars/911274357026869288/81106889728f725deeec6009fd910101.webp?size=1024&format=webp&width=0&height=256">
-                <h3>SWRMANE</h3>
-                <p>Developer</p>
-            </div>
-            <div class="team-member">
-                <img src="https://cdn.discordapp.com/avatars/837075640241881128/178f33c281445403c2a94db4404faeaa.webp?size=1024&format=webp&width=0&height=256" alt="Člen tímu">
-                <h3>Señor Glum</h3>
-                <p>Správca Serveru</p>
-           
-            </div>
-       </div>
-		<h2>Admin Team</h2>
-		<div class="team-members">
-			<div class="team-member">
-                <img src="https://cdn.discordapp.com/avatars/687291975950532628/ac92b4c7bf6244a57312ea3c906cc345.webp?size=1024&format=webp&width=0&height=256" alt="Člen tímu">
-                <h3>Mafia Inu.</h3>
-                <p>Správca AT</p>
-            </div>
-			
-			<div class="team-member">
-                <img src="https://cdn.discordapp.com/avatars/805791627972050954/82aacddba41d97b55618ca40e8590c70.webp?size=1024&format=webp&width=0&height=256" alt="Člen tímu">
-                <h3>Kummiss</h3>
-                <p>Zástupca Správcu AT</p>
-            </div>
-		</div>
-		
-		<div class="team-memebers">
-			<div class="team-member">
-                <img src="https://cdn.discordapp.com/avatars/1070365659525034035/a_788d39ee261b047f229319e0e070d795.gif?size=4096" alt="Člen tímu">
-                <h3>LUK3Š_</h3>
-                <p>HL.Administrátor</p>
-            </div>
-		
-			<div class="team-member">
-                <img src="https://cdn.discordapp.com/avatars/810412522640375809/05613c0e873a089cd2e0c440d4162e31.webp?size=1024&format=webp&width=0&height=256" alt="Člen tímu">
-                <h3>DemonCZE1</h3>
-                <p>Administrátor</p>
-            </div>
-			
-		</div>
-		<h2>Helper Team</h2>
-		<div class="team-members">
-			<div class="team-member">
-                <img src="https://cdn.discordapp.com/avatars/1007369738537672847/533434584ae911e3916c3a756ae9e5a4.webp?size=1024&format=webp&width=0&height=256" alt="Člen tímu">
-                <h3>Flan</h3>
-                <p>HL.Helper</p>
-            </div>
-			
+    <!-- Maintenance Status Section -->
+    <div class="status">
+        <h3>Site Under Maintenance</h3>
+        <p>We are currently updating our site to provide a better experience. Please check back later.</p>
+    </div>
 
-		</div>
-		
-			
-	 	<div class="team-member">
-                <img src="https://cdn.discordapp.com/avatars/701513705996681237/ac77b82846ee6c01cdf88f85dd9c1443.webp?size=1024&format=webp&width=0&height=256" alt="Člen tímu">
-                <h3>major lefty</h3>
-                <p>Helper</p>
-            </div>
-		</div>
-		<div class="team-members">
-			<div class="team-member">
-                <img src="https://cdn.discordapp.com/avatars/828284961541980170/231ec6d93c72d7b0a2e4c96ee3d34bb1.webp?size=1024&format=webp&width=0&height=256" alt="Člen tímu">
-                <h3>ShadowD4rkness</h3>
-                <p>Helper</p>
-            </div>
-		
-		</div>
-		<h2>RP Team</h2>
-		<div class="team-members">
-	
-            
-		<div class="team-member">
-                <img src="https://cdn.discordapp.com/avatars/1078380640166215740/f36fa184a149c796809fbb5b99fdb26f.webp?size=1024&format=webp&width=0&height=256" alt="Člen tímu">
-                <h3>Itz_Noltix</h3>
-                <p>Správca RP</p>
-            	</div>
-	    
-	   	<div class="team-member">
-                <img src="https://cdn.discordapp.com/avatars/1127212515877716010/24a8c1632405c48c41255f66fe128bdb.webp?size=1024&format=webp&width=0&height=256" alt="Člen tímu">
-                <h3>Watermelon Gaming</h3>
-                <p>Zástupca Správcu RP</p>
-        	</div>
-		</div>
-    </section>
-	
-	<section id="podpora" class="contact-section">
-        <h2>Podporte nás</h2>
-        <p>Podporiť nás môžete na našom patreone.</a></p>
-		<p><a href="https://www.patreon.com/ShyGuyParadise" class="btn">Patreon</a></p>
-		
+    <!-- Footer Section -->
+    <div class="footer">
+        &copy; 2024 ShyGuyParadise. All rights reserved.
+    </div>
 
-    </section>
-	
-
-
-    <section id="kontakt" class="contact-section">
-        <h2>Kontaktujte nás</h2>
-        <p>Ak máte nejaké otázky alebo návrhy, neváhajte nás kontaktovať na našom discorde.
-		<p><a href="https://discord.gg/T49TMyhk5T" class="btn">Pripojiť sa</a></p>
-		<iframe src="https://discord.com/widget?id=1221471602772807740&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-		
-
-    </section>
-	
-
-
-    <footer>
-        <p>&copy; 2024 ShyGuyParadise. Všetky práva vyhradené.</p>
-        <a href="#domov">Späť na začiatok</a>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
