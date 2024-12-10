@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShyGuyParadise SCP:SL Server Status</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #121212;
+            color: white;
+        }
+
+        /* Info bar */
+        .info-bar {
+            background: #ffcc00;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .info-bar a {
+            color: #000;
+            text-decoration: underline;
+        }
+		
+		.info-bar-2 {
+            background: #ff0000;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+		
+		.info-bar-2 a {
+            color: #be0000;
+            text-decoration: underline;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            background-color: #292b2c;
+            padding: 30px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #00b0f4;
+        }
+
+        .header h2 {
+            margin: 10px 0 0;
+            font-size: 18px;
+            color: #cccccc;
+        }
+
+        /* Server Status */
+        .status {
+            margin: 40px auto;
+            max-width: 800px;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .status h3 {
+            margin: 0 0 20px;
+            font-size: 24px;
+            color: #00e676;
+        }
+
+        .server {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 5px; /* Reduced margin for closer server status */
+            padding-bottom: 10px; /* Added padding for space under the server */
+            border-bottom: 1px solid #333; /* Line under each server */
+        }
+
+        .server .server-label {
+            font-size: 18px;
+        }
+
+        .server .server-status {
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .server .online {
+            background: #00e676;
+            color: #121212;
+        }
+
+        .server .offline {
+            background: #e60000;
+            color: #121212;
+        }
+
+        .server .operational {
+            background: #00e676;
+            color: #121212;
+        }
+
+        .server .maintenance {
+            background: #ffcc00;
+            color: #121212;
+        }
+		
+		.server .degraded {
+			background: #ff9800; /* Amber */
+			color: #121212;
+		}		
+
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin: 40px 0;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Info bar (to notify users of issues) -->
+    <div class="info-bar">
+        Some servers are undergoing maintenance. Should be back soon. 
+    </div>
+	<div class="info-bar-2">
+        We are aware of the degraded performance of our plugins and are working on a fix.
+    </div>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>ShyGuyParadise</h1>
+        <h2>Server Status</h2>
+    </div>
+
+    <!-- Server Status Section -->
+    <div class="status">
+        <h3>Server Status</h3>
+
+        <div class="server">
+            <span class="server-label">CZ/SK #1</span>
+            <span class="server-status" id="status-1">Loading...</span>
+        </div>
+        <div class="server">
+            <span class="server-label">CZ/SK #RP</span>
+            <span class="server-status" id="status-2">Loading...</span>
+        </div>
+        <div class="server">
+            <span class="server-label">CZ/SK #BETA</span>
+            <span class="server-status" id="status-3">Loading...</span>
+        </div>
+        <div class="server">
+            <span class="server-label">EU/ENG #1</span>
+            <span class="server-status" id="status-4">Loading...</span>
+        </div>
+        <div class="server">
+            <span class="server-label">Website</span>
+            <span class="server-status" id="status-5">Loading...</span>
+        </div>
+        <div class="server">
+            <span class="server-label">Hosting</span>
+            <span class="server-status" id="status-6">Loading...</span>
+        </div>
+		<div class="server">
+            <span class="server-label">Plugins</span>
+            <span class="server-status" id="status-7">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        &copy; 2024 ShyGuyParadise. All rights reserved.
+    </div>
+
+    <script>
+        // Simulate server data (could be manually edited later to reflect real data)
+        const serverStatus = [
+            { id: 1, status: 'ONLINE' },
+            { id: 2, status: 'ONLINE' },
+            { id: 3, status: 'MAINTENANCE' },
+            { id: 4, status: 'MAINTENANCE' },
+            { id: 5, status: 'MAINTENANCE' },
+            { id: 6, status: 'OPERATIONAL' },
+			{ id: 7, status: 'DEGRADED' }
+        ];
+
+        // Function to update the server status on the page
+        function updateServerStatus() {
+            serverStatus.forEach(server => {
+                const statusElement = document.getElementById(`status-${server.id}`);
+                statusElement.classList.remove('online', 'offline', 'operational', 'maintenance'); // Remove all classes first
+                if (server.status === 'ONLINE') {
+                    statusElement.textContent = "Online";
+                    statusElement.classList.add('online');
+                } else if (server.status === 'OFFLINE') {
+                    statusElement.textContent = "Offline";
+                    statusElement.classList.add('offline');
+                } else if (server.status === 'OPERATIONAL') {
+                    statusElement.textContent = "Operational";
+                    statusElement.classList.add('operational');
+                } else if (server.status === 'MAINTENANCE') {
+                    statusElement.textContent = "Maintenance";
+                    statusElement.classList.add('maintenance');
+                }else if (server.status === 'DEGRADED') {
+				   statusElement.textContent = "Degraded Performance";
+				   statusElement.classList.add('degraded');
+				}
+
+				
+
+            });
+        }
+
+        // Refresh the status every 5 seconds
+        updateServerStatus();
+        setInterval(updateServerStatus, 5000);
+    </script>
+
+</body>
+</html>
